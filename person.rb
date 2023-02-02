@@ -4,7 +4,7 @@ require_relative './trimmer_decorator'
 require_relative './rental'
 
 class Person < Nameable
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name: 'Unknown', parent_permission: true)
     super()
     @id = rand(1..1000)
     @name = name
