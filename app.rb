@@ -32,27 +32,35 @@ class App
   def create_student
     print 'Age: '
     age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp.downcase == 'y'
-    print 'Classroom: '
-    classroom = gets.chomp
-    @people.push(Student.new(classroom, age, name: name, parent_permission: parent_permission))
-    puts
-    puts 'Person created successfuly'
+    if age == 0
+      puts 'Invalid age'
+    else
+      print 'Name: '
+      name = gets.chomp
+      print 'Has parent permission? [Y/N]: '
+      parent_permission = gets.chomp.downcase == 'y'
+      print 'Classroom: '
+      classroom = gets.chomp
+      @people.push(Student.new(classroom, age, name: name, parent_permission: parent_permission))
+      puts
+      puts 'Person created successfuly'
+    end
   end
 
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialization: '
-    specialization = gets.chomp
-    @people.push(Teacher.new(specialization, age, name: name))
-    puts
-    puts 'Person created successfuly'
+    if age == 0
+      puts 'Invalid age'
+    else
+      print 'Name: '
+      name = gets.chomp
+      print 'Specialization: '
+      specialization = gets.chomp
+      @people.push(Teacher.new(specialization, age, name: name))
+      puts
+      puts 'Person created successfuly'
+    end
   end
 
   def create_person
