@@ -32,7 +32,7 @@ class App
   def create_student
     print 'Age: '
     age = gets.chomp.to_i
-    if age == 0
+    if age.zero?
       puts 'Invalid age'
     else
       print 'Name: '
@@ -50,7 +50,7 @@ class App
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
-    if age == 0
+    if age.zero?
       puts 'Invalid age'
     else
       print 'Name: '
